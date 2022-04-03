@@ -32,5 +32,17 @@
     "target_path": "packages/apps/NotGameTurbo",
     "branch": "evo-cnb",
     "remote": "github-non-los"
+  },
+  {
+    "repository": "fakhrads/android_device_xiaomi_onyx-miuicamera",
+    "target_path": "device/xiaomi/onyx-miuicamera",
+    "branch": "evo-cnb",
+    "remote": "github-non-los"
+  },
+  {
+    "repository": "fakhrads/proprietary_vendor_xiaomi_onyx-miuicamera",
+    "target_path": "vendor/xiaomi/onyx-miuicamera",
+    "branch": "evo-cnb",
+    "remote": "github-non-los"
   }
 ]
