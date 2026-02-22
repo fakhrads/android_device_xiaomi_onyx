@@ -7,6 +7,13 @@
         </interface>
     </hal>
     <hal format="aidl" optional="true">
+        <name>vendor.dolby.dms</name>
+        <interface>
+            <name>IDms</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
         <name>vendor.xiaomi.hardware.aidl.intentaware</name>
         <interface>
             <name>IIntentAwareService</name>
