@@ -5,8 +5,9 @@
     "branch": "bka"
   },
   {
-    "repository": "crdroidandroid/android_kernel_xiaomi_onyx",
-    "target_path": "device/xiaomi/onyx-kernel"
+    "repository": "fakhrads/android_kernel_xiaomi_onyx",
+    "target_path": "device/xiaomi/onyx-kernel",
+    "branch": "16.0"
   },
   {
     "repository": "fakhrads/proprietary_vendor_xiaomi_onyx",
