@@ -101,31 +101,19 @@ bool setDeviceSpecificMode(Mode type, bool enabled) {
             return false;
           }
 
-          int32_t result = 0;
-          const auto gameStatus = touchfeature->setModeValue(
-              TOUCH_ID, TOUCH_GAME_MODE, enabled ? 1 : 0, &result);
+          const auto gameStatus = touchfeature->setTouchMode(
+              TOUCH_ID, TOUCH_GAME_MODE, enabled ? 1 : 0);
           if (!gameStatus.isOk()) {
-            LOG(ERROR) << "setModeValue failed for GAME: "
+            LOG(ERROR) << "setTouchMode failed for GAME: "
                        << gameStatus.getDescription();
             return false;
           }
 
-          if (result < 0) {
-            LOG(ERROR) << "setModeValue returned failure for GAME: " << result;
-            return false;
-          }
-
-          const auto activeStatus = touchfeature->setModeValue(
-              TOUCH_ID, TOUCH_ACTIVE_MODE, enabled ? 1 : 0, &result);
+          const auto activeStatus = touchfeature->setTouchMode(
+              TOUCH_ID, TOUCH_ACTIVE_MODE, enabled ? 1 : 0);
           if (!activeStatus.isOk()) {
-            LOG(ERROR) << "setModeValue failed for ACTIVE: "
+            LOG(ERROR) << "setTouchMode failed for ACTIVE: "
                        << activeStatus.getDescription();
-            return false;
-          }
-
-          if (result < 0) {
-            LOG(ERROR) << "setModeValue returned failure for ACTIVE: "
-                       << result;
             return false;
           }
 
