@@ -23,10 +23,6 @@ $(call soong_config_set,rfs,mpss_firmware_symlink_target,modem_firmware)
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
 
-# BCR
-$(call inherit-product, vendor/bcr/bcr.mk)
-
-
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
@@ -155,10 +151,6 @@ PRODUCT_PACKAGES += \
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
-
-# Dolby
-PRODUCT_PACKAGES += \
-    LunarisDolby
 
 # Fastbootd
 PRODUCT_PACKAGES += \

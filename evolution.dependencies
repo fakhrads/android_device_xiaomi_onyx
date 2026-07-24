@@ -1,16 +1,17 @@
 [
   {
-    "repository": "crdroidandroid/android_hardware_xiaomi",
-    "target_path": "hardware/xiaomi"
+    "repository": "Evolution-X-Devices/hardware_xiaomi",
+    "target_path": "hardware/xiaomi",
+    "branch": "bka"
   },
   {
     "repository": "crdroidandroid/android_kernel_xiaomi_onyx",
     "target_path": "device/xiaomi/onyx-kernel"
   },
   {
-    "repository": "crdroidandroid/proprietary_vendor_xiaomi_onyx",
+    "repository": "fakhrads/proprietary_vendor_xiaomi_onyx",
     "target_path": "vendor/xiaomi/onyx",
-    "remote": "crdroid-gitlab"
+    "remote": "16.0"
   },
   {
     "repository": "crdroidandroid/proprietary_vendor_xiaomi_miuicamera",
@@ -23,13 +24,5 @@
     "target_path": "device/xiaomi/onyx-miuicamera",
     "branch": "16.0-onyx",
     "remote": "crdroid-gitlab"
-  },
-  {
-    "repository": "crdroidandroid/android_packages_apps_LunarisDolby",
-    "target_path": "packages/apps/LunarisDolby"
-  },
-  {
-    "repository": "crdroidandroid/android_vendor_bcr",
-    "target_path": "vendor/bcr"
   }
 ]
