@@ -50,6 +50,10 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default \
     audio.usb.default \
 
+# Dolby (vendor DAX/DMS services already ship in proprietary_vendor_xiaomi_onyx)
+PRODUCT_PACKAGES += \
+    LunarisDolby
+
 PRODUCT_PACKAGES += \
     audioadsprpcd \
     audiohalservice.qti \
