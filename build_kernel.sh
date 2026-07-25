@@ -71,7 +71,11 @@ if [ -z "$IMG" ]; then
 fi
 
 case "$IMG" in
-    *.gz|*.gz-dtb)
+    *.gz)
+        gzip -dkf "$IMG"
+        IMG="${IMG%.gz}"
+        ;;
+    *.gz-dtb)
         cp "$IMG" "$WORK/Image.gz"
         gzip -dkf "$WORK/Image.gz"
         IMG="$WORK/Image"
