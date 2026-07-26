@@ -26,6 +26,11 @@ attribute dvs_aidl;
 attribute hal_aidl_dms_client;
 attribute hal_aidl_dms_server;
 
+# Vibratorfeature
+attribute hal_vibratorfeature;
+attribute hal_vibratorfeature_client;
+attribute hal_vibratorfeature_server;
+
 # Hypsys
 attribute hal_hypsys_vendor_service_client;
 
