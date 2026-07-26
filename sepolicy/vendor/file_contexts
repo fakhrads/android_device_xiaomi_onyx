@@ -75,6 +75,7 @@
 
 # Vibratorfeature
 /odm/bin/hw/vendor\.xiaomi\.hardware\.vibratorfeature\.service u:object_r:hal_vibratorfeature_default_exec:s0
+/dev/qcom_haptic u:object_r:qcom_haptic_device:s0
 
 # Fingerprint
 /data/vendor/fpc(/.*)? u:object_r:fingerprint_vendor_data_file:s0
