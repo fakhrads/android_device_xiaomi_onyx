@@ -17,6 +17,11 @@ attribute vendor_hal_displayfeature_xiaomi;
 attribute vendor_hal_displayfeature_xiaomi_server;
 attribute vendor_hal_displayfeature_xiaomi_client;
 
+# Vibratorfeature
+attribute hal_vibratorfeature;
+attribute hal_vibratorfeature_client;
+attribute hal_vibratorfeature_server;
+
 # Hypsys
 attribute hal_hypsys_vendor_service_client;
 
