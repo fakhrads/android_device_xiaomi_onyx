@@ -14,9 +14,15 @@ allow hal_vibratorfeature_server hal_vibratorfeature_client:fd *;
 allow hal_vibratorfeature_server hal_vibratorfeature_service:service_manager { add find };
 
 # qcom-haptics + AW8697/awinic/cs40l26/si_haptic sysfs and char device access,
-# matching vendor.xiaomi.hardware.vibratorfeature.service.rc.
+# matching vendor.xiaomi.hardware.vibratorfeature.service.rc. /dev/qcom_haptic
+# gets its own dev_type below instead of the generic "device" type - AOSP's
+# neverallow domain device (chr_file (read write open)) in
+# system/sepolicy/private/domain.te forbids granting access to the generic
+# type directly.
+type qcom_haptic_device, dev_type;
+
 allow hal_vibratorfeature_default sysfs:dir { open read search };
 allow hal_vibratorfeature_default sysfs:file { getattr open read write };
-allow hal_vibratorfeature_default device:chr_file { getattr open read write ioctl };
+allow hal_vibratorfeature_default qcom_haptic_device:chr_file { getattr open read write ioctl };
 allow hal_vibratorfeature_default mnt_vendor_file:dir { search };
 allow hal_vibratorfeature_default mnt_vendor_file:file { getattr open read write create };
