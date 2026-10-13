@@ -425,6 +425,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
 
+# The stock touchfeature service needs the AIDL from interfaces/touchfeature,
+# so drop the incompatible one from hardware/xiaomi.
+$(call soong_config_set_bool,xiaomi,disable_touchfeature_aidl,true)
+
 # Update engine
 PRODUCT_PACKAGES += \
     update_engine \
