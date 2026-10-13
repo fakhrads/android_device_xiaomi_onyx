@@ -13,6 +13,10 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Inherit from onyx device
 $(call inherit-product, device/xiaomi/onyx/device.mk)
 
+# Boot animation
+TARGET_SCREEN_HEIGHT := 2772
+TARGET_SCREEN_WIDTH := 1280
+
 PRODUCT_NAME := lineage_onyx
 PRODUCT_DEVICE := onyx
 PRODUCT_MANUFACTURER := Xiaomi
