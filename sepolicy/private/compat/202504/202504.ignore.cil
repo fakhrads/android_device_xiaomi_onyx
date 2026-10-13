@@ -6,4 +6,8 @@
 (typeattributeset new_objects
   ( new_objects
     vendor_hal_displayfeature_xiaomi_default
-    vendor_hal_displayfeature_xiaomi_service))
+    vendor_hal_displayfeature_xiaomi_service
+    mosey_app
+    mosey_server
+    mosey_server_exec
+    mosey_service))
