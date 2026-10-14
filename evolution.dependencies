@@ -26,5 +26,11 @@
     "target_path": "vendor/xiaomi/onyx",
     "branch": "evo-cnb",
     "remote": "github-non-los"
+  },
+  {
+    "repository": "fakhrads/android_packages_apps_NotGameTurbo",
+    "target_path": "packages/apps/NotGameTurbo",
+    "branch": "evo-cnb",
+    "remote": "github-non-los"
   }
 ]
