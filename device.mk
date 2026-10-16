@@ -264,6 +264,7 @@ PRODUCT_PACKAGES += \
 
 # Lineage Health
 PRODUCT_PACKAGES += \
+    BypassCharging \
     vendor.lineage.health-service.default
 
 $(call soong_config_set,lineage_health,charging_control_charging_path,/sys/class/xm_power/charger/smart_charge/smart_night)
