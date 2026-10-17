@@ -336,6 +336,13 @@ PRODUCT_PACKAGES += \
     WifiOverlayOnyx \
     WifiOverlayOnyxCN
 
+# Updater: OTA list from fakhrads-builds, one per flavor (WITH_GMS=false is the vanilla build)
+ifeq ($(WITH_GMS),false)
+PRODUCT_PACKAGES += UpdaterOverlayOnyxVanilla
+else
+PRODUCT_PACKAGES += UpdaterOverlayOnyx
+endif
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 

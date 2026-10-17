@@ -1,0 +1,16 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+runtime_resource_overlay {
+    name: "UpdaterOverlayOnyx",
+    system_ext_specific: true,
+}
+
+runtime_resource_overlay {
+    name: "UpdaterOverlayOnyxVanilla",
+    manifest: "AndroidManifest-vanilla.xml",
+    resource_dirs: ["res-vanilla"],
+    system_ext_specific: true,
+}
