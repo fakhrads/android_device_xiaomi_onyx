@@ -4,6 +4,9 @@ allow hal_power_default vendor_sysfs_msm_perf:file rw_file_perms;
 
 # ADPF: set uclamp on the threads of hint sessions (apps' RenderThread, SurfaceFlinger, HWC,
 # system_server), as hardware/google/pixel-sepolicy/power-libperfmgr does
+# App threads carry per-user MLS categories (s0:c512,c768); without this, setsched on them is
+# denied by the MLS constraint even though the type rule allows it.
+typeattribute hal_power_default mlstrustedsubject;
 allow hal_power_default appdomain:process { getsched setsched };
 allow hal_power_default self:capability sys_nice;
 allow hal_power_default surfaceflinger:process setsched;
